@@ -1,0 +1,42 @@
+
+---
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+import TestimonialCards from "../ui/TestimonialCards.jsx";
+---
+
+<section id="choose-us" class="py-12 bg-white overflow-hidden">
+  <div
+    class="max-w-[1408px] mx-auto w-full bg-[#EEEEFF] py-8 sm:py-12 md:py-12 px-4 sm:px-8 md:px-8 lg:px-12 xl:px-20 rounded-3xl overflow-hidden"
+  >
+    
+    <!-- Top Badge -->
+    <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+      <span
+        class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+      >
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        Testimonials
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <div class="text-center mb-4 sm:mb-6" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-gray-900 mb-2 leading-tight">
+        What Our Customers Say
+      </h2>
+    </div>
+
+    <!-- Description -->
+    <div class="text-center mb-6 sm:mb-8" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xs sm:text-sm md:text-base text-gray-700 max-w-xl mx-auto px-2">
+        Elevate your productivity with our innovative AI-powered platform. Achieve unparalleled efficiency and streamline.
+      </p>
+    </div>
+
+    <!-- Swiper Section -->
+    <div class="w-full overflow-hidden">
+      <TestimonialCards client:visible />
+    </div>
+
+  </div>
+</section>

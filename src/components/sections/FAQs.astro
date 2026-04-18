@@ -1,0 +1,147 @@
+---
+// Component
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+
+const faqs = [
+  {
+    question: "How long does it take to set up?",
+    answer:
+      "Most customers are up and running within 15 minutes. Our onboarding wizard guides you through the entire process, and our support team is available 24/7 to help.",
+  },
+  {
+    question: "Do you offer data migration assistance?",
+    answer: "Yes, we provide full migration support for your data.",
+  },
+  {
+    question: "What integrations do you support?",
+    answer: "We support multiple third-party integrations.",
+  },
+  {
+    question: "Is my data secure?",
+    answer: "Yes, your data is fully encrypted and secure.",
+  },
+  {
+    question: "Can I cancel my subscription anytime?",
+    answer: "Yes, you can cancel anytime without hidden fees.",
+  },
+];
+---
+
+<section class="py-12 bg-white">
+  <div
+    class="max-w-[1408px] mx-auto h-auto w-full bg-[#F9F9F9] py-8 sm:py-12 md:py-12 px-4 sm:px-8 md:px-8 lg:px-12 xl:px-20 rounded-3xl">
+
+    <!-- Header -->
+     <!-- Top Badge -->
+    <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+        <span
+        class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+      >
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        FAQs
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <div class="text-center mb-4 sm:mb-6" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-gray-900 mb-2 leading-tight">
+        Frequently Asked Questions
+      </h2>
+    </div>
+
+    <!-- Description -->
+    <div class="text-center mb-6 sm:mb-8 md:mb-20" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xs sm:text-sm md:text-base text-gray-700 max-w-xl mx-auto px-2">
+        Elevate your productivity with our AI-powered platform.
+      </p>
+    </div>
+
+    <!-- FAQ -->
+<div id="faq-container" class="max-w-[846px] mx-auto space-y-3 sm:space-y-4">
+
+  {faqs.map((faq, index) => (
+    
+    <div class="faq-item border border-gray-200 rounded-3xl bg-white overflow-hidden transition-all duration-300">
+
+      <!-- Button -->
+      <button
+        class="faq-trigger w-full flex justify-between items-center gap-4 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-left font-medium text-[#1c1c1c]"
+        data-index={index}
+        aria-expanded="false"
+      >
+
+        <span class="text-[#1c1c1c] text-base sm:text-lg md:text-[20px] leading-[22px] sm:leading-[24px]">
+          {faq.question}
+        </span>
+
+        <svg
+          class="faq-icon w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Content -->
+      <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+        
+        <div class="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 w-full text-[#1c1c1c] text-sm sm:text-base leading-[20px] sm:leading-[22px]">
+          {faq.answer}
+        </div>
+      </div>
+
+    </div>
+  ))}
+
+</div>
+  </div>
+</section>
+
+<!-- ✅ Clean JS (Scoped + Professional) -->
+<script is:inline>
+  const container = document.getElementById("faq-container");
+
+  container.addEventListener("click", (e) => {
+    const trigger = e.target.closest(".faq-trigger");
+    if (!trigger) return;
+
+    const item = trigger.parentElement;
+    const content = item.querySelector(".faq-content");
+    const icon = trigger.querySelector(".faq-icon");
+
+    const isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+    // ✅ Close all
+    container.querySelectorAll(".faq-trigger").forEach((btn) => {
+      btn.setAttribute("aria-expanded", "false");
+    });
+
+    container.querySelectorAll(".faq-content").forEach((el) => {
+      el.style.maxHeight = null;
+    });
+
+    container.querySelectorAll(".faq-icon").forEach((el) => {
+      el.classList.remove("rotate-180");
+    });
+
+    // ✅ REMOVE ACTIVE STATE (IMPORTANT)
+    container.querySelectorAll(".faq-item").forEach((el) => {
+      el.classList.remove("bg-[#EEEEFF]", "border-[#664CDD]");
+      el.classList.add("bg-white", "border-gray-200");
+    });
+
+    // ✅ Open clicked
+    if (!isOpen) {
+      trigger.setAttribute("aria-expanded", "true");
+      content.style.maxHeight = content.scrollHeight + "px";
+      icon.classList.add("rotate-180");
+
+      // ✅ ADD ACTIVE STATE (IMPORTANT)
+      item.classList.remove("bg-white", "border-gray-200");
+      item.classList.add("bg-[#EEEEFF]", "border-[#664CDD]");
+    }
+  });
+</script>

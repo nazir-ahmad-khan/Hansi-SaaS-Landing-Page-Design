@@ -1,0 +1,360 @@
+---
+// Features section component
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+
+import Automation from "../../assets/icons/features/automation.png?url";
+import checkShield from "../../assets/icons/features/check-shield.png?url";
+import CollaborationIcon from "../../assets/icons/features/Team-Collaboration-Icon.png?url";
+import Integration from "../../assets/icons/features/integration.png?url";
+import MobileAccessIcon from "../../assets/icons/features/Mobile-Access-Icon.png?url";
+import AnalyticsIcon from "../../assets/icons/features/Real-Time Analytics.png?url";
+
+
+import SecurityContent from "../../assets/images/features/Advanced-Security-Content.png?url";
+import AutomationContent from "../../assets/images/features/automation-Content.png?url";
+import AnalyticsChat from "../../assets/images/features/Real-Time AnalyticsChat.png?url";
+import MobileAccess1 from "../../assets/images/features/Mobile-Access-Container.png?url";
+import MobileAccess2 from "../../assets/images/features/Mobile-Access-Icon-Container.png?url";
+import Collaboration from "../../assets/images/features/Team-Collaboration.png?url";
+import IconContainer from "../../assets/images/features/Icon-Container.png?url";
+
+
+
+
+---
+
+<section id="features" class="py-8 sm:py-12 md:py-16 lg:py-10 px-2 sm:px-4 md:px-6 lg:px-4 bg-white">
+  <div
+    class="max-w-[1408px] h-auto mx-auto bg-[#F8F6FF] py-8 sm:py-12 md:py-16 lg:py-16 px-4 sm:px-8 md:px-12 lg:px-12 xl:px-20 rounded-3xl"
+  >
+    <!-- Header Section -->
+    <div
+      class="max-w-2xl mx-auto text-center mb-8 sm:mb-12 md:mb-16 lg:mb-14 space-y-3 sm:space-y-4 md:space-y-6"
+      data-aos="fade-up"
+    >
+      <span
+        class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+      >
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        Features
+      </span>
+
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-[#1C1C1C]"
+      >
+        Everything you Need to Scale your Business
+      </h2>
+
+      <p
+        class="text-xs sm:text-sm md:text-base lg:text-lg text-[#1C1C1C] max-w-xl mx-auto px-2"
+      >
+        Elevate your productivity with our innovative AI-powered platform,
+        achieve unparalleled efficiency and streamline.
+      </p>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="flex flex-col lg:flex-col gap-3 sm:gap-4 md:gap-6">
+
+<!-- 1st part  -->
+    <div class="flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-6">
+      <!-- Left Big Card - Gradient Background -->
+      <div
+        class="relative w-full lg:w-[737px] h-auto lg:h-[439px] flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-6 bg-linear-to-b from-[#E0F4FA] to-white rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10"
+        data-aos="fade-up"
+      >
+
+      <!-- Gradient Overlay -->
+      <div  
+  class="absolute bottom-0 left-0 w-full h-40 pointer-events-none z-20 rounded-3xl"  
+  style="background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, #FFFFFF 100%);">
+</div>
+        <!-- Icon -->
+
+        <div
+          class="w-10 h-8 sm:w-12 sm:h-12 mt-1 bg-[#88C5D6] flex justify-center items-center rounded-lg flex-shrink-0"
+        >
+          <img src={Automation} alt="Automation icon" class="w-6 h-6" />
+        </div>
+
+        <div>
+          <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-[#1C1C1C]">
+            Smart Automation
+          </h3>
+          <p class="text-xs sm:text-sm md:text-base text-[#1C1C1C] mb-5">
+            Set up intelligent workflows that handle routine processes
+            automatically. Save 40+ hours per week and reduce human error by
+            95%.
+          </p>
+
+          <img
+            src={AutomationContent}
+            alt="Automation content image"
+            class="object-cover z-10"
+          />
+        </div>
+      </div>
+
+      <!-- Right Small Card -->
+      <div class="w-full lg:w-[522px] h-auto lg:h-[439px] flex flex-col lg:flex-row lg:gap-6">
+        <div
+          class="bg-gradient-to-b from-[#E5E1FC] via-[#fcfcfc] to-[#ffffff]
+          flex gap-3 sm:gap-4 md:gap-6 max-w-full bg-white rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 relative overflow-hidden"
+          data-aos="fade-up"
+        >
+          <!-- Content -->
+          <div class="flex gap-3 sm:gap-4 md:gap-6 relative z-10">
+            <!-- Icon -->
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 mt-1 bg-[#8878CE] flex justify-center items-center rounded-lg flex-shrink-0"
+            >
+              <img src={AnalyticsIcon} alt="Analytics icon" class="w-6 h-6" />
+            </div>
+
+            <!-- Text -->
+            <div>
+              <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-[#1C1C1C]">
+                Real-Time Analytics
+              </h3>
+
+              <p class="text-xs sm:text-sm md:text-base text-[#1C1C1C] mb-5">
+                Get comprehensive analytics and reporting that help you make
+                informed decisions instantly.
+              </p>
+              <img
+                src={AnalyticsChat}
+                alt="Analytics chat image"
+                class="object-cover z-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- Second part -->
+    <div class="flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-6">
+
+
+      <!-- Left Small Card -->
+      <div class="w-full lg:w-[522px] h-auto lg:h-[439px] flex flex-col lg:flex-row lg:gap-6">
+        <div
+          class="bg-gradient-to-b from-[#F8E4E2] via-[#fdf9f9] to-[#ffffff]
+          flex gap-3 sm:gap-4 md:gap-6 max-w-full bg-white rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 relative overflow-hidden"
+          data-aos="fade-up"
+        >
+
+        <!-- Gradient Overlay -->
+        <div  
+  class="absolute bottom-0 left-0 w-full h-40 pointer-events-none z-20 "  
+  style="background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, #FFFFFF 100%);">
+</div>
+
+
+          <!-- Content -->
+          <div class="flex gap-3 sm:gap-4 md:gap-6 relative z-10">
+
+            
+
+            <!-- Icon -->
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 mt-1 bg-[#DB9A95] flex justify-center items-center rounded-lg flex-shrink-0"
+            >
+              <img src={Integration} alt="Icon container" class="w-6 h-6" />
+            </div>
+
+            <!-- Text -->
+            <div>
+              <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-[#1C1C1C]">
+                Real-Time Analytics
+              </h3>
+
+              <p class="text-xs sm:text-sm md:text-base text-[#1C1C1C] mb-5">
+                Get comprehensive analytics and reporting that help you make
+                informed decisions instantly.
+              </p>
+              <img
+                src={IconContainer}
+                alt="Analytics chat image"
+                class="w-[80%] object-cover z-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Right Big Card - Gradient Background -->
+      <div
+        class="relative w-full lg:w-[737px] h-auto lg:h-[439px] flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-6 bg-linear-to-b from-[#E0F4FA] to-white rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10"
+        data-aos="fade-up">
+
+<!-- Gradient Overlay -->
+      <div  
+  class="absolute bottom-0 left-0 w-full h-40 pointer-events-none z-20 rounded-3xl"  
+  style="background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, #FFFFFF 100%);">
+</div>
+        
+
+        <!-- Icon -->
+
+        <div
+          class="w-10 h-10 sm:w-12 sm:h-12 mt-1 bg-[#664CDD] flex justify-center items-center rounded-lg flex-shrink-0"
+        >
+          <img src={checkShield} alt="Security icon" class="w-6 h-6" />
+        </div>
+
+        <div>
+          <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-[#1C1C1C]">
+            Advanced Security
+          </h3>
+          <p class="text-xs sm:text-sm md:text-base text-[#1C1C1C] mb-5">
+            Protect your data with bank-level encryption, SOC 2 compliance, and regular security audits. Your information stays safe and private.
+          </p>
+
+          <img
+            src={SecurityContent}
+            alt="Automation content image"
+            class="object-cover z-10"
+          />
+        </div>
+      </div>
+
+      
+
+      
+
+      
+    </div>
+
+
+
+
+<!-- Third part -->
+    <div class="flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-6">
+      <!-- Left Big Card - Gradient Background -->
+      <div
+        class="relative w-full lg:w-[737px] h-auto lg:h-[439px] flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-6 bg-linear-to-b from-[#E0F4FA] to-white rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10"
+        data-aos="fade-up"
+      >
+
+      <!-- Gradient Overlay -->
+      <div  
+  class="absolute bottom-0 left-0 w-full h-40 pointer-events-none z-20 rounded-3xl"  
+  style="background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, #FFFFFF 100%);">
+</div>
+        <!-- Icon -->
+
+        <div
+          class="w-10 h-10 sm:w-12 sm:h-12 mt-1 bg-[#8878CE] flex justify-center items-center rounded-lg flex-shrink-0"
+        >
+          <img src={CollaborationIcon} alt="Automation icon" class="w-6 h-6" />
+        </div>
+
+        <div>
+          <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-[#1C1C1C]">
+            Team Collaboration
+          </h3>
+          <p class="text-xs sm:text-sm md:text-base text-[#1C1C1C] mb-5">
+            Enable seamless team collaboration with shared dashboards, real-time updates, and role-based access controls.
+          </p>
+
+          <img
+            src={Collaboration}
+            alt="Automation content image"
+            class="object-cover z-10"
+          />
+        </div>
+      </div>
+
+      <!-- Right Small Card -->
+      <div class="w-full lg:w-[522px] h-auto lg:h-[439px] flex flex-col lg:flex-row lg:gap-6">
+        <div
+          class="bg-gradient-to-b from-[#DDE5FE] via-[#f4f5f8] to-[#ffffff]
+          flex gap-3 sm:gap-4 md:gap-6 max-w-full bg-white rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 relative overflow-hidden"
+          data-aos="fade-up"
+        >
+
+        <!-- Gradient Overlay -->
+        <div  
+  class="absolute bottom-0 left-0 w-full h-40 pointer-events-none z-20"  
+  style="background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, #FFFFFF 100%);">
+</div>
+
+
+          <!-- Content -->
+          <div class="flex gap-3 sm:gap-4 md:gap-6 relative z-10">
+            <!-- Icon -->
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 mt-1 bg-[#88C5D6] flex justify-center items-center rounded-lg flex-shrink-0"
+            >
+              <img src={MobileAccessIcon} alt="Analytics icon" class="w-6 h-6" />
+            </div>
+
+            <!-- Text -->
+            <div>
+              <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-[#1C1C1C]">
+                Mobile Access
+              </h3>
+
+              <p class="text-xs sm:text-sm md:text-base text-[#1C1C1C] mb-5">
+                GManage operations from any device. Mobile apps for iOS and Android offer full functionality.
+              </p>
+
+              <div class="flex flex-row sm:flex-row items-end items-center gap-3 sm:gap-4 md:gap-6 mt-4">
+
+  <!-- Big Image -->
+  <img
+    src={MobileAccess1}
+    alt="Mobile Access 1"
+    class="w-32 sm:w-40 md:w-48 lg:w-[180px] object-contain"
+  />
+
+  <!-- Small Image -->
+  <img
+    src={MobileAccess2}
+    alt="Mobile Access 2"
+    class="w-32 sm:w-40 md:w-48 lg:w-[180px] object-contain opacity-90"
+  />
+
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+    
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+</section>

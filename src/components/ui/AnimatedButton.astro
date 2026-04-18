@@ -1,0 +1,19 @@
+---
+const { text = "Start Free 14-Day Trial" } = Astro.props;
+---
+
+<button class="relative h-10 sm:h-12 px-6 sm:px-8 rounded-3xl overflow-hidden text-white bg-[#664CDD] group w-full sm:w-auto">
+  <div class="relative h-full">
+    
+    <!-- Default Text -->
+    <span class="block leading-10 sm:leading-12 transition-transform duration-300 group-hover:-translate-y-full text-sm sm:text-base">
+      {text}
+    </span>
+
+    <!-- Hover Text -->
+    <span class="absolute left-0 top-0 w-full h-full flex items-center justify-center translate-y-full transition-transform duration-300 group-hover:translate-y-0 text-sm sm:text-base">
+      {text}
+    </span>
+
+  </div>
+</button>

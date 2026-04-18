@@ -1,0 +1,117 @@
+---
+// imports same rahain
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+
+import LiveTracking from "../../assets/icons/CardsBenefites/Live-Tracking.png?url";
+import Dashboard from "../../assets/icons/CardsBenefites/dashboard.png?url";
+import Insights from "../../assets/icons/CardsBenefites/insights.png?url";
+import SecureData from "../../assets/icons/CardsBenefites/secure.png?url";
+import PersonalizedReports from "../../assets/icons/CardsBenefites/personalized-reports.png?url";
+import UserFriendly from "../../assets/icons/CardsBenefites/love-user.png?url";
+
+
+
+const benefits = [
+  {
+    icon: LiveTracking,
+    title: "Live Tracking",
+    desc: "Quickly monitor user activity to make smarter decisions.",
+    bg: "bg-gradient-to-b from-[#F8E4E2] via-[#fcfafa] to-[#ffffff]",
+    border: "border-[#FDCAC6]",
+  },
+  {
+    icon: Dashboard,
+    title: "All-in-One Dashboard",
+    desc: "Consolidate all your analytics in one place—no more switching between tools.",
+    bg: "bg-gradient-to-b from-[#E5E1FC] via-[#f2f1f8] to-[#ffffff]",
+    border: "border-[#D3D3FF]",
+  },
+  {
+    icon: Insights,
+    title: "Useful Insights",
+    desc: "Focus on the key metrics that drive sustainable growth for your business.",
+    bg: "bg-gradient-to-b from-[#E0F4FA] via-[#edf2f3] to-[#ffffff]",
+    border: "border-[#B3D0D9]",
+  },
+  {
+    icon: SecureData,
+    title: "Secure Data",
+    desc: "Ensure your analytics are safe with robust security and encryption.",
+    bg: "bg-gradient-to-b from-[#E0F4FA] via-[#edf2f3] to-[#ffffff]",
+    border: "border-[#B3D0D9]",
+  },
+  {
+    icon: PersonalizedReports,
+    title: "Personalized Reports",
+    desc: "Create tailored reports that highlight the insights that matter most.",
+    bg: "bg-gradient-to-b from-[#F8E4E2] via-[#fcfafa] to-[#ffffff]",
+    border: "border-[#FDCAC6]",
+  },
+  {
+    icon: UserFriendly,
+    title: "User-Friendly",
+    desc: "Navigate easily—no learning curve, start making better choices immediately.",
+    bg: "bg-gradient-to-b from-[#E5E1FC] via-[#f2f1f8] to-[#ffffff]",
+    border: "border-[#D3D3FF]",
+  },
+];
+---
+
+<section class=" py-12 sm:py-16 bg-[#FFFFFF]">
+  
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-4 md:px-12 lg:px-12">
+
+    <!-- ✅ Badge (same code) -->
+    <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+      <span class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm">
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        Benefits
+      </span>
+    </div>
+
+    <!-- ✅ Heading (UPDATED TEXT from screenshot) -->
+    <div class="text-center mb-4 sm:mb-6" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-[#1c1c1c] mb-2 leading-tight">
+        Benefits That Actually<br class="hidden sm:block" /> Matter to You
+      </h2>
+    </div>
+
+    <!-- ✅ Description (UPDATED TEXT from screenshot) -->
+    <div class="text-center mb-10 sm:mb-14" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xs sm:text-sm md:text-base text-[#1c1c1c] max-w-lg mx-auto px-1">
+        Keep an eye on your metrics in real-time so you can react fast and stay on top of your goals.
+      </p>
+    </div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 lg:gap-4">
+
+  {benefits.map((item) => (
+    <div
+      class={`rounded-3xl w-full max-w-[413px] min-h-[240px] mx-auto p-6 sm:p-8 border border-white bg-gradient-to-b ${item.bg}`}
+      data-aos="fade-up"
+    >
+
+      <!-- Icon -->
+      <div class={`w-12 h-12 flex items-center justify-center rounded-full border ${item.border} mb-6`}>
+        <img src={item.icon} alt={item.title} class="w-6 h-6" />
+      </div>
+
+      <!-- Heading -->
+      <h3 class="text-[24px] leading-[32px] font-semibold text-[#1C1C1C] mb-3">
+        {item.title}
+      </h3>
+
+      <!-- Description -->
+      <p class="text-[16px] leading-[20px] font-medium text-[#1C1C1C]">
+        {item.desc}
+      </p>
+
+    </div>
+  ))}
+
+</div>
+     
+
+  </div>
+</section>

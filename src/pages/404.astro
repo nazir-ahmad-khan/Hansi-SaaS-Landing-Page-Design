@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ErrorBlurBg from "../assets/images/ErrorPage/errorBlurImg.png?url"
+import AnimatedButton from '../components/ui/AnimatedButton.astro';
+---
+
+<Layout>
+  <section class="w-full min-h-screen flex items-center justify-center relative overflow-hidden px-4">
+
+    <!-- Background -->
+    <div
+      class="absolute inset-0 flex items-center justify-center pointer-events-none -z-10"
+    >
+      <img
+        src={ErrorBlurBg}
+        alt="background"
+        class="w-[180%] sm:w-[140%] md:w-[120%] lg:w-[100%] opacity-70 object-contain"
+      />
+    </div>
+
+    <!-- Content -->
+    <div class="text-center flex flex-col items-center gap-4">
+
+      <!-- 404 TEXT -->
+      <h1 class="font-bold leading-none 
+                 text-[72px] sm:text-[96px] md:text-[120px] lg:text-[140px]">
+        404
+      </h1>
+
+      <!-- Title -->
+      <p class="font-medium 
+                text-[20px] sm:text-[28px] md:text-[32px] lg:text-[36px]">
+        Oops! Page not found
+      </p>
+
+      <!-- Description -->
+      <p class="text-gray-500 
+                text-[14px] sm:text-[15px] md:text-[16px]">
+        The page you’re looking for doesn’t exist.
+      </p>
+
+      <!-- Button -->
+      <div class="mt-6 sm:mt-8">
+        <a href="/">
+          <AnimatedButton text="Return to Home" /> 
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+</Layout>

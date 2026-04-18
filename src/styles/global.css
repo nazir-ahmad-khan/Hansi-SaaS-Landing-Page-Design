@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+body {
+	font-family: 'Onest';
+	overflow-x: hidden;
+}

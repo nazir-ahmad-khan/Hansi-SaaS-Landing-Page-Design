@@ -1,0 +1,623 @@
+---
+// ✅ Modern Pricing Section - Fully Responsive
+// Features: Badge + Icon, Interactive Toggle, 3 Pricing Cards, Responsive Design
+
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+
+import AnimatedButton from "../ui/AnimatedButton.astro";
+import PricingToggle from "../forms/PricingToggle.jsx";
+
+// Features Comparison
+import Crown from "../../assets/icons/FeaturesComparison/crown.png?url";
+import Vector from "../../assets/icons/FeaturesComparison/Vector.png?url";
+import Vector1 from "../../assets/icons/FeaturesComparison/Vector1.png?url";
+import Vector2 from "../../assets/icons/FeaturesComparison/Vector2.png?url";
+---
+
+<section
+  id="pricing"
+  class="py-12 sm:py-16 md:py-20 lg:py-24 bg-white relative overflow-hidden"
+>
+  <!-- Background subtle gradient -->
+  <div
+    class="relative flex flex-col items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8"
+  >
+    <!-- ✅ HEADER SECTION -->
+    <div
+      class="text-center items-center justify-center flex flex-col mb-8 sm:mb-10 md:mb-12 lg:mb-16"
+      data-aos="fade-up"
+    >
+      <!-- ✅ Badge with Icon -->
+      <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+        >
+          <img
+            src={FeatureBadgeIcon}
+            alt="Feature badge icon"
+            class="w-4 h-4"
+          />
+          Pricing
+        </span>
+      </div>
+
+      <!-- ✅ Main Heading -->
+      <div
+        class="text-center mb-4 sm:mb-6"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h2
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-[#1c1c1c] mb-2 leading-tight"
+        >
+          Choose the Perfect Plan<br class="hidden sm:block" /> for Your Business
+        </h2>
+      </div>
+
+      <!-- ✅ Description -->
+      <p
+        class="text-xs sm:text-sm md:text-base text-[#1c1c1c] max-w-lg mx-auto px-1"
+      >
+        Elevate your productivity with our innovative AI-powered platform.
+        Achieve unparalleled efficiency and streamline.
+      </p>
+    </div>
+    <div>
+      <!-- ✅ Toggle Button (Monthly/Yearly) -->
+      <PricingToggle client:load />
+    </div>
+
+    
+    
+    <!-- ✅ PRICING CARDS GRID -->
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8">
+      <!-- ✅ STARTER PLAN CARD -->
+      <div
+        class="w-full max-w-[413px] h-auto md:h-[536px] mx-auto
+         rounded-3xl bg-gradient-to-b from-[#F8E4E2] to-white p-8 sm:p-10 md:p-8 lg:p-8 flex flex-col justify-between
+         relative md:scale-105"
+        data-aos="fade-up"
+      >
+        <!-- Card Content -->
+        <div class="flex flex-col h-full pt-4">
+          <!-- Plan Title -->
+          <h3
+            class="text-[20px] leading-[26px] font-semibold text-[#1C1C1C] mb-6"
+          >
+            Starter Plan
+          </h3>
+
+          <!-- Price Section -->
+          <div class="mb-8">
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-[36px] leading-[46px] font-semibold text-[#1C1C1C]"
+                >$29</span
+              >
+              <span class="text-[16px] leading-[20px] text-[#1C1C1C]"
+                >/month</span
+              >
+            </div>
+          </div>
+
+          <!-- Features List -->
+          <ul class="space-y-1 mb-8 flex-grow">
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Up to 5 team members</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >10 automated workflows</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Basic integrations (50+)</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Email support</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >5GB storage</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Basic analytics</span
+              >
+            </li>
+          </ul>
+
+          <!-- CTA Button -->
+          <AnimatedButton text="Start Free Trial" />
+        </div>
+      </div>
+      <!-- end  -->
+
+      <!-- ✅ PROFESSIONAL PLAN CARD (MOST POPULAR) -->
+
+      <div
+        class="w-full max-w-[413px] h-auto md:h-[536px] mx-auto
+         rounded-3xl bg-gradient-to-b from-[#f2f1f8] to-white p-8 sm:p-10 md:p-8 lg:p-8 flex flex-col justify-between
+          md:scale-105"
+        data-aos="fade-up"
+      >
+        <!-- Most Popular Badge -->
+        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <span
+            class="inline-block bg-[#1C1C1C] text-white text-xs sm:text-sm font-light px-4 sm:px-5 py-1.5 sm:py-1 rounded-full shadow-lg"
+          >
+            Most Popular
+          </span>
+        </div>
+
+        <!-- Card Content -->
+        <div class="flex flex-col h-full pt-4">
+          <!-- Plan Title -->
+          <h3
+            class="text-[20px] leading-[26px] font-semibold text-[#1C1C1C] mb-6"
+          >
+            Professional Plan
+          </h3>
+
+          <!-- Price Section -->
+          <div class="mb-8">
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-[36px] leading-[46px] font-semibold text-[#1C1C1C]"
+                >$79</span
+              >
+              <span class="text-[16px] leading-[20px] text-[#1C1C1C]"
+                >/month</span
+              >
+            </div>
+          </div>
+
+          <!-- Features List -->
+          <ul class="space-y-1 mb-8 flex-grow">
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Up to 25 team members</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Unlimited automated workflows</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Advanced integrations (500+)</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Priority support</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >50GB storage</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Advanced analytics & reporting</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Custom dashboards</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700">API access</span
+              >
+            </li>
+          </ul>
+
+          <!-- CTA Button -->
+          <AnimatedButton text="Start Free Trial" />
+        </div>
+        <!-- </div> -->
+      </div>
+
+      <!-- ✅ ENTERPRISE PLAN CARD -->
+
+      <div
+        class="w-full max-w-[413px] h-auto md:h-[536px] mx-auto
+         rounded-3xl bg-gradient-to-b from-[#E0F4FA] to-white p-8 sm:p-10 md:p-8 lg:p-8 flex flex-col justify-between
+         relative md:scale-105"
+        data-aos="fade-up"
+      >
+        <!-- Card Content -->
+        <div class="flex flex-col h-full pt-4">
+          <!-- Plan Title -->
+          <h3
+            class="text-[20px] leading-[26px] font-semibold text-[#1C1C1C] mb-6"
+          >
+            Enterprise Plan
+          </h3>
+
+          <!-- Price Section -->
+          <div class="mb-8">
+            <div class="flex items-baseline gap-1">
+              <span
+                class="text-[36px] leading-[46px] font-semibold text-[#1C1C1C]"
+                >$99</span
+              >
+              <span class="text-[16px] leading-[20px] text-[#1C1C1C]"
+                >/month</span
+              >
+            </div>
+          </div>
+
+          <!-- Features List -->
+          <ul class="space-y-1 mb-8 flex-grow">
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Unlimited team members</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Enterprise-grade security</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Dedicated account manager</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Custom integrations</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Unlimited storage</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >White-label options</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >SLA guarantees</span
+              >
+            </li>
+            <li
+              class="flex text-[16px] leading-[20px] text-[#1C1C1C] items-start gap-2"
+            >
+              <svg
+                class="w-5 h-5 text-slate-900 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-sm sm:text-base text-slate-700"
+                >Advanced compliance features</span
+              >
+            </li>
+          </ul>
+
+          <!-- CTA Button -->
+          <AnimatedButton text="Start Free Trial" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Features Comparison -->
+<section class="flex flex-col items-center justify-center gap-6 sm:gap-8 border-t border-[#E8E8E8] px-4 sm:px-6 md:px-10 lg:px-14 py-10 sm:py-12 md:py-14">
+
+  <!-- Heading -->
+  <div>
+    <p class="text-sm sm:text-base md:text-[16px] leading-[20px] text-[#1C1C1C] text-center">
+      Features Comparison
+    </p>
+  </div>
+
+  <!-- Features Wrapper -->
+  <div class="flex flex-wrap justify-center gap-3 sm:gap-5 md:gap-6 lg:gap-4 w-full max-w-6xl">
+
+    <!-- Item -->
+    <div class="flex items-center justify-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 border border-[#E8E8E8] rounded-4xl w-full sm:w-auto">
+      <img src={Crown} alt="Vector" class="w-4 h-4 sm:w-5 sm:h-5" />
+      <p class="text-sm sm:text-base md:text-[18px] leading-[22px] sm:leading-[24px] text-[#1C1C1C] text-center sm:text-left">
+        All plans include 14-day free trial
+      </p>
+    </div>
+
+    <!-- Item -->
+    <div class="flex items-center justify-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 border border-[#E8E8E8] rounded-4xl w-full sm:w-auto">
+      <img src={Vector} alt="Vector" class="w-4 h-4 sm:w-5 sm:h-5" />
+      <p class="text-sm sm:text-base md:text-[18px] leading-[22px] sm:leading-[24px] text-[#1C1C1C] text-center sm:text-left">
+        No setup fees
+      </p>
+    </div>
+
+    <!-- Item -->
+    <div class="flex items-center justify-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 border border-[#E8E8E8] rounded-4xl w-full sm:w-auto">
+      <img src={Vector1} alt="Vector1" class="w-4 h-4 sm:w-5 sm:h-5" />
+      <p class="text-sm sm:text-base md:text-[18px] leading-[22px] sm:leading-[24px] text-[#1C1C1C] text-center sm:text-left">
+        Cancel anytime
+      </p>
+    </div>
+
+    <!-- Item -->
+    <div class="flex items-center justify-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 border border-[#E8E8E8] rounded-4xl w-full sm:w-auto">
+      <img src={Vector2} alt="Vector2" class="w-4 h-4 sm:w-5 sm:h-5" />
+      <p class="text-sm sm:text-base md:text-[18px] leading-[22px] sm:leading-[24px] text-[#1C1C1C] text-center sm:text-left">
+        99.9% uptime guarantee
+      </p>
+    </div>
+
+  </div>
+</section>

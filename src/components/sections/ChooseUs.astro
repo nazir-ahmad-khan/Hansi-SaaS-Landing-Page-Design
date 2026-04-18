@@ -1,0 +1,183 @@
+---
+// Why Choose Us section component with animated counters
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+
+import AutomationIcon from "../../assets/icons/ChooseUs/Automation-Icon.png?url";
+import MobileIcon from "../../assets/icons/ChooseUs/Mobile-Icon.png?url";
+---
+
+<section id="choose-us" class="py-12 bg-white">
+  <div
+    class="max-w-[1280px] mx-auto h-auto w-full bg-[#F8F6FF] py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 lg:px-20 rounded-3xl"
+  >
+<!-- w-[1280px] h-[754px] -->
+    <!-- Top Badge -->
+    <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+        <span
+        class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+      >
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        Why Choose Us?
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <div class="text-center mb-4 sm:mb-6" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-gray-900 mb-2 leading-tight">
+        The Ideal Fit for Your<br class="hidden sm:block" /> Unique Business Needs
+      </h2>
+    </div>
+
+    <!-- Description -->
+    <div class="text-center mb-6 sm:mb-8" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xs sm:text-sm md:text-base text-gray-700 max-w-md mx-auto px-2">
+        We're all about your success, so we provide custom solutions that fit your specific needs.
+      </p>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-6">
+      <!-- Card 1: Easy Automation -->
+      <div
+        class="flex items-center justify-center
+        bg-gradient-to-b from-[#f3dbd9] to-white
+        rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow"
+        data-aos="fade-up"
+        data-aos-delay="300"
+
+        >
+       
+        <div class="flex items-start gap-3 sm:gap-4">
+          <div class="bg-[#DB9A95] rounded-xl p-2 sm:p-3 flex-shrink-0">
+          <img src={AutomationIcon} alt="Automation icon" class="w-5 h-5 sm:w-6 sm:h-6" />
+          </div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-bold text-[#1C1C1C] mb-2">Easy Automation</h3>
+            <p class="text-[#1C1C1C] text-sm sm:text-base">
+              Let's chat about how automated workflows can really boost your game when it comes to managing leads, helping customers, and sealing the deal on sales.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Mobile-Friendly -->
+      <!-- bg-gradient-to-b from-[#ffffff] via-[#e9f3f7] to-[#c7e6f0] -->
+      <div
+        class="items-center justify-center
+        bg-gradient-to-b from-[#E0F4FA] via-[#edf2f3] to-[#ffffff]
+        rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-sm hover:shadow-md transition-shadow"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <div class="flex items-start gap-3 sm:gap-4">
+          <div class="bg-[#88C5D6] rounded-xl p-2 sm:p-3 flex-shrink-0">
+          <img src={MobileIcon} alt="Mobile icon" class="w-5 h-5 sm:w-6 sm:h-6" />
+          </div>
+          <div>
+            <h3 class="text-lg sm:text-xl font-bold text-[#1C1C1C] mb-2">Mobile-Friendly</h3>
+            <p class="text-[#1C1C1C] text-sm sm:text-base">
+              Show how using your phone makes it super easy to keep up with your customers, no matter where you are!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Counter Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+      <!-- Counter 1: Positive Reviews -->
+      <div
+        class="bg-white rounded-2xl p-4 sm:p-6 md:p-8 text-center shadow-sm hover:shadow-md transition-shadow"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+          <span class="counter" data-target="100">0</span>K+
+        </div>
+        <p class="text-xs sm:text-sm md:text-base text-gray-600 font-medium">Positive Reviews</p>
+      </div>
+
+      <!-- Counter 2: Users Satisfied -->
+      <div
+        class="bg-white rounded-2xl p-4 sm:p-6 md:p-8 text-center shadow-sm hover:shadow-md transition-shadow"
+        data-aos="fade-up"
+        data-aos-delay="600"
+      >
+        <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+          <span class="counter" data-target="78">0</span>k+
+        </div>
+        <p class="text-xs sm:text-sm md:text-base text-gray-600 font-medium">Users Satisfied</p>
+      </div>
+
+      <!-- Counter 3: Overall Ratings -->
+      <div
+        class="bg-white rounded-2xl p-4 sm:p-6 md:p-8 text-center shadow-sm hover:shadow-md transition-shadow sm:col-span-2 md:col-span-1"
+        data-aos="fade-up"
+        data-aos-delay="700"
+      >
+        <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+          <span class="counter" data-target="4.9" data-decimal="true">4.9/5</span>
+        </div>
+        <p class="text-xs sm:text-sm md:text-base text-gray-600 font-medium">Overall Ratings</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script id="senior-counter">
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+    let hasAnimated = false;
+
+    // 👉 Intersection Observer (run on scroll)
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            animateCounters();
+            hasAnimated = true;
+            observer.disconnect(); // run only once
+          }
+        });
+      },
+      { threshold: 0.5 } // 50% visible hone par trigger
+    );
+
+    const section = document.querySelector("#choose-us");
+    if (section) observer.observe(section);
+
+    // 👉 Counter animation function
+    function animateCounters() {
+      counters.forEach((counter) => {
+        const target = parseFloat(counter.dataset.target || "0");
+        const isDecimal = counter.dataset.decimal === "true";
+        const duration = 2000;
+
+        let startTime = null;
+
+        const updateCounter = (timestamp) => {
+          if (!startTime) startTime = timestamp;
+
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          const current = target * progress;
+
+          counter.textContent = isDecimal
+            ? current.toFixed(1)
+            : Math.floor(current);
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            // 👉 ensure exact final value
+            counter.textContent = isDecimal
+              ? target.toFixed(1)
+              : target;
+          }
+        };
+
+        requestAnimationFrame(updateCounter);
+      });
+    }
+  });
+</script>

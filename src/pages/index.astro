@@ -1,17 +1,37 @@
 ---
+import Hero from '../components/sections/Hero.astro';
+import LogoSlider from '../components/sections/LogoSlider.astro';
+import Benefits from '../components/sections/Benefits.astro';
+import ChooseUs from '../components/sections/ChooseUs.astro';
+import Integrations from '../components/sections/Integrations.astro';
+import Layout from '../layouts/Layout.astro';
+import Features from '../components/sections/Features.astro';
+import Pricing from '../components/sections/Pricing.astro';
+import Blog from '../components/sections/Blog.astro';
+import Process from '../components/sections/Process.astro';
+import Testimonial from '../components/sections/Testimonial.astro';
+import CardsBenefits from '../components/sections/CardsBenefits.astro';
+import GrowData from '../components/sections/GrowData.astro';
+import FAQs from '../components/sections/FAQs.astro';
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<Hero />
+	<LogoSlider />
+	<Features />
+	<ChooseUs />
+	<Process />
+	<Benefits />
+	<Integrations />
+	<Testimonial />
+	<CardsBenefits/>
+	<GrowData />
+	<Pricing />
+	<FAQs />
+	<Blog />
+
+
+</Layout>
+
+

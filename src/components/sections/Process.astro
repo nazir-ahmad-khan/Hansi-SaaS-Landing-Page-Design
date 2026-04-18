@@ -1,0 +1,147 @@
+---
+// Why Choose Us section component with animated counters
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+
+import UserIcon from "../../assets/icons/processIc/step1User.png?url";
+import settingIcon from "../../assets/icons/processIc/sync-setting.png?url";
+import Launch from "../../assets/icons/processIc/launch.png?url";
+
+import AnimatedButton from "../ui/AnimatedButton.astro";
+---
+
+<section id="choose-us" class="py-8 sm:py-12 md:py-12 lg:py-12 bg-white">
+  <div
+    class="max-w-[1280px] mx-auto h-auto w-full bg-[#F8F6FF] py-8 sm:py-12 md:py-16 lg:py-12 px-4 sm:px-8 md:px-12 lg:px-20 rounded-3xl"
+  >
+    <!-- Top Badge -->
+    <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+        <span
+        class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+      >
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        Process
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <div class="text-center mb-4 sm:mb-6" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-[#1c1c1c] mb-2 leading-tight">
+        Get Started in<br class="hidden sm:block" /> Minutes, Not Hours
+      </h2>
+    </div>
+
+    <!-- Description -->
+    <div class="text-center mb-6 sm:mb-8" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xs sm:text-sm md:text-base text-gray-700 max-w-md mx-auto px-2">
+        Elevate your productivity with our innovative AI-powered platform. Achieve unparalleled efficiency and streamline.
+      </p>
+    </div>
+
+
+
+
+
+
+
+    <!-- Feature Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-4 mt-10 sm:mt-12 md:mt-16 items-start">
+      
+      <!-- Card 1 -->
+      <div 
+        data-aos="fade-up"
+        class="w-full md:max-w-[423px] h-auto
+        bg-[#f6dede] rounded-3xl p-4 sm:p-6 md:p-8 text-left shadow-sm"
+      >
+      
+      <div class="flex justify-between items-center mb-4 sm:mb-6">
+        
+        <p class="text-[#5F5F5F] text-xs sm:text-sm">Step 1</p>
+          <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full border flex items-center justify-center text-[#FDCAC6] flex-shrink-0">
+            <img src={UserIcon} alt="User icon" />
+          </div>
+        </div>
+
+        <h3 class="text-lg sm:text-xl md:text-[24px] font-semibold text-[#1C1C1C]">
+            Sign Up & Connect
+          </h3>
+
+        <p class="text-[#1C1C1C] text-xs sm:text-sm md:text-base">
+          Create your account and connect your existing tools with our one-click integrations.
+        </p>
+
+        <button class="mt-4 sm:mt-6 px-3 sm:px-4 py-1 text-xs sm:text-sm bg-[#FCD6D2] text-[#C94D41] rounded-full">
+          Time: 2 minutes
+        </button>
+      </div>
+
+      <!-- Card 2 (slightly lower) -->
+      <div 
+        data-aos="fade-up"
+        data-aos-delay="150"
+        class="w-full md:max-w-[423px] h-auto
+        bg-[#F3F3FF] rounded-3xl p-4 sm:p-6 md:p-8 text-left shadow-sm mt-0 md:mt-10"
+      >
+      
+      <div class="flex justify-between items-center mb-4 sm:mb-6">
+        
+        <p class="text-[#5F5F5F] text-xs sm:text-sm">Step 2</p>
+          <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full border flex items-center justify-center text-[#D3D3FF] flex-shrink-0">
+            <img src={settingIcon} alt="Setting icon" />
+          </div>
+        </div>
+
+        <h3 class="text-lg sm:text-xl md:text-[24px] font-semibold text-[#1C1C1C]">
+            Configure & Customize
+          </h3>
+        <p class="text-[#1C1C1C] text-xs sm:text-sm md:text-base">
+          Set up your workflows, customize dashboards, and configure automation rules to match your needs.
+        </p>
+
+        <button class="mt-4 sm:mt-6 px-3 sm:px-4 py-1 text-xs sm:text-sm bg-[#E5E0FF] text-[#664CDD] rounded-full">
+          Time: 10 minutes
+        </button>
+      </div>
+
+      <!-- Card 3 (more lower) -->
+      <div 
+        data-aos="fade-up"
+        data-aos-delay="300"
+        class="w-full md:max-w-[423px] h-auto
+        bg-[#EAFAFF] rounded-3xl p-4 sm:p-6 md:p-8 text-left shadow-sm mt-0 md:mt-20"
+      >
+      
+      <div class="flex justify-between items-center mb-4 sm:mb-6">
+        
+        <p class="text-[#5F5F5F] text-xs sm:text-sm">Step 3</p>
+          <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full border flex items-center justify-center text-[#E0F4FA] flex-shrink-0">
+            <img src={Launch} alt="Launch icon" />
+          </div>
+        </div>
+
+        <h3 class="text-lg sm:text-xl md:text-[24px] font-semibold text-[#1C1C1C]">
+            Launch & Scale
+          </h3>
+        <p class="text-[#1C1C1C] text-xs sm:text-sm md:text-base">
+          Activate your automated workflows and start scaling your operations with intelligent insights.
+        </p>
+
+        <button class="mt-4 sm:mt-6 px-3 sm:px-4 py-1 text-xs sm:text-sm bg-[#C6E4EE] text-[#3F6F7D] rounded-full">
+          Time: 15 minutes
+        </button>
+      </div>
+
+    </div>
+
+    <!-- CTA Button -->
+    <div class="flex items-center justify-center mt-10 sm:mt-12 md:mt-16">
+      <AnimatedButton text="Start Your Free Trial Today" />
+    </div>
+
+
+
+
+    
+  
+  </div>
+
+</section>

@@ -1,0 +1,132 @@
+---
+// Component
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+
+import BlogImg from "../../assets/images/Blog/Blog-Image.png?url";
+import BlogImgOne from "../../assets/images/Blog/Blog-Image-1.png?url";
+import BlogImgTwo from "../../assets/images/Blog/Blog-Image-2.png?url";
+
+import AnimatedButton from "../ui/AnimatedButton.astro";
+
+---
+
+<section id="blog" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+  <div
+    class="max-w-[1280px] mx-auto h-auto w-full rounded-3xl">
+    <!-- Header -->
+     <!-- Top Badge -->
+    <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+        <span
+        class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+      >
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        Blog
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <div class="text-center mb-4 sm:mb-6" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-gray-900 mb-2 leading-tight">
+        Latest Insights & Updates
+      </h2>
+    </div>
+
+    <!-- Description -->
+    <div class="text-center mb-6 sm:mb-8 md:mb-20" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xs sm:text-sm md:text-base text-gray-700 max-w-xl mx-auto px-2">
+        Elevate your productivity with our innovative AI-powered platform. Achieve unparalleled efficiency and streamline.
+      </p>
+    </div>
+
+    {/* 🔹 Cards Layout */}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+
+  {/* 🟣 LEFT BIG CARD */}
+  <div class="w-full h-auto bg-white rounded-2xl p-4 shadow-sm" data-aos="fade-up">
+
+    <!-- ✅ FIX: responsive image height -->
+    <img src={BlogImg} alt="main" class="w-full h-48 sm:h-56 md:h-64 lg:h-92 object-cover rounded-xl" />
+
+    <div class="mt-4">
+      <p class="text-sm sm:text-[16px] text-[#5F5F5F]">
+        Automation • March 15, 2024
+      </p>
+
+      <h3 class="mt-2 text-base sm:text-lg md:text-[20px] font-semibold leading-snug">
+        10 Business Processes You Should Automate Today
+      </h3>
+
+      <p class="mt-2 text-sm sm:text-[16px] text-[#1c1c1c]">
+        Discover which routine tasks are costing your business time and money, and how to automate them for maximum efficiency.
+      </p>
+    </div>
+
+  </div>
+
+  {/* 🟣 RIGHT SIDE */}
+  {/* 🟣 RIGHT SIDE */}
+<div class="w-full lg:w-[628px] h-auto flex flex-col rounded-2xl p-4 shadow-sm gap-4 sm:gap-6">
+
+  {/* 🔹 Card 1 */}
+  <div class="flex flex-col sm:flex-row h-auto bg-white rounded-2xl p-4 gap-3 sm:gap-4 items-start sm:items-center shadow-sm" data-aos="fade-up">
+
+    <!-- ✅ IMAGE -->
+    <img 
+      src={BlogImgOne} 
+      class="w-full sm:w-[160px] md:w-[180px] lg:w-[224px] 
+             h-[180px] sm:h-[140px] md:h-[160px] lg:h-[200px] 
+             object-cover rounded-xl flex-shrink-0" 
+    />
+
+    <!-- ✅ TEXT -->
+    <div class="w-full">
+      <p class="text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[20px] text-[#5F5F5F] pb-1 sm:pb-2">
+        Analytics • March 12, 2024
+      </p>
+
+      <h4 class="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] 
+                 leading-[20px] sm:leading-[22px] md:leading-[24px] lg:leading-[26px] 
+                 text-[#1C1C1C] font-semibold">
+        How Data-Driven Decisions Boost Revenue
+      </h4>
+    </div>
+
+  </div>
+
+  {/* 🔹 Card 2 */}
+  <div class="flex flex-col sm:flex-row h-auto bg-white rounded-2xl p-4 gap-3 sm:gap-4 items-start sm:items-center shadow-sm" data-aos="fade-up" data-aos-delay="150">
+
+    <!-- ✅ IMAGE -->
+    <img 
+      src={BlogImgTwo} 
+      class="w-full sm:w-[160px] md:w-[180px] lg:w-[224px] 
+             h-[180px] sm:h-[140px] md:h-[160px] lg:h-[200px] 
+             object-cover rounded-xl flex-shrink-0" 
+    />
+
+    <!-- ✅ TEXT -->
+    <div class="w-full">
+      <p class="text-[12px] sm:text-[14px] md:text-[16px] leading-[18px] sm:leading-[20px] text-[#5F5F5F] pb-1 sm:pb-2">
+        Productivity • March 10, 2024
+      </p>
+
+      <h4 class="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] 
+                 leading-[20px] sm:leading-[22px] md:leading-[24px] lg:leading-[26px] 
+                 text-[#1C1C1C] font-semibold">
+        Remote Team Management: Best Practices for 2024
+      </h4>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<div class="flex items-center justify-center pt-12">
+
+  <AnimatedButton text=" View All Articles" />
+</div>
+
+  </div>
+</section>

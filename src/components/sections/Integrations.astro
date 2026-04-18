@@ -1,0 +1,62 @@
+---
+// Why Choose Us section component with animated counters
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+import AnimatedButton from "../ui/AnimatedButton.astro";
+
+import IntegrationIcons from "../../assets/images/Integrations/Integration-Icons.png?url";
+---
+
+<section id="integrations" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+  <div
+    class="max-w-[1280px] mx-auto w-full bg-[#EEEEFF] py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 lg:px-20 rounded-3xl"
+  >
+
+    <!-- Top Badge -->
+    <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+      <span
+        class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+      >
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        Integrations
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <div class="text-center mb-4 sm:mb-6" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-gray-900 mb-2 leading-tight">
+        Seamlessly Connects<br class="hidden sm:block" /> with Your Favorite Tools
+      </h2>
+    </div>
+
+    <!-- Description -->
+    <div class="text-center mb-6 sm:mb-8" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xs sm:text-sm md:text-base text-gray-700 max-w-md mx-auto px-2">
+        Elevate your productivity with our innovative AI-powered platform. Achieve unparalleled efficiency and streamline.
+      </p>
+    </div>
+
+    <!-- Button -->
+    <div data-aos="fade-up" class="text-center">
+      <AnimatedButton text="View All 500+ Integrations" />
+    </div>
+
+    <!-- ✅ FIXED IMAGE SECTION -->
+    <div 
+      data-aos="fade-up" 
+      class="flex items-center justify-center mt-10 sm:mt-12 md:mt-16 px-2"
+    >
+      <img 
+        src={IntegrationIcons} 
+        alt="Integration Icons"
+
+        class="
+          w-full
+          max-w-[900px]
+          h-auto
+          object-contain
+        "
+      />
+    </div>
+
+  </div>
+</section>

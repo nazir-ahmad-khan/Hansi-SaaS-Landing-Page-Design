@@ -1,0 +1,174 @@
+---
+// Why Choose Us section component with animated counters
+import FeatureBadgeIcon from "../../assets/icons/BadgeIcon/fi_feature.png?url";
+
+import CrossIcon from "../../assets/icons/GrowData/cross.png?url";
+import CheckIcon from "../../assets/icons/GrowData/check.png?url";
+
+---
+
+<section id="choose-us" class="py-12 bg-white overflow-hidden">
+  <div
+    class="max-w-[1408px] mx-auto h-auto w-full bg-[#EEEEFF] py-8 sm:py-12 md:py-12 px-4 sm:px-8 md:px-8 lg:px-12 xl:px-20 rounded-3xl"
+  >
+    <!-- Top Badge -->
+    <div class="flex justify-center mb-4 sm:mb-6" data-aos="fade-up">
+        <span
+        class="inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+      >
+        <img src={FeatureBadgeIcon} alt="Feature badge icon" class="w-4 h-4" />
+        Why Alytics
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <div class="text-center mb-4 sm:mb-6" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-semibold text-gray-900 mb-2 leading-tight">
+        A Smarter Way to<br class="hidden sm:block" /> Grow with Data
+      </h2>
+    </div>
+
+    <!-- Description -->
+    <div class="text-center mb-6 sm:mb-8 md:mb-20" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-xs sm:text-sm md:text-base text-gray-700 max-w-xl mx-auto px-2">
+        Transform complex data into clear, actionable insights that empower you to make smarter decisions—faster.
+      </p>
+    </div>
+
+
+    <!-- MAIN GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8  justify-items-center items-stretch">
+
+      <!-- LEFT BOX -->
+
+      <div 
+        class="
+          bg-[#FFFFFF] rounded-3xl p-6 sm:p-8 md:p-10
+          w-full max-w-[522px] h-auto lg:h-[371px]
+          
+        xl:relative
+        xl:left-20
+        md:left-0 md:top-0
+        "
+        data-aos="fade-up"
+      >
+
+
+        <!-- Heading -->
+        <h2 class="text-center text-[28px] sm:text-[32px] lg:text-[36px] leading-[40px] lg:leading-[46px] font-semibold text-[#1C1C1C]">
+    Other Tools
+  </h2>
+
+        <!-- Divider -->
+        <div class="w-full h-[1px] bg-[#E5E5E5] my-6"></div>
+
+        <!-- List -->
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <img src={CrossIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#5F5F5F]">
+              Data scattered across too many platforms
+            </p>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <img src={CrossIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#5F5F5F]">
+              Time-consuming reporting processes
+            </p>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <img src={CrossIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#5F5F5F]">
+              Generic, one-size-fits-all insights
+            </p>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <img src={CrossIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#5F5F5F]">
+              No intelligent guidance for decisions
+            </p>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <img src={CrossIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#5F5F5F]">
+              Difficult to identify what’s truly working
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- RIGHT BOX -->
+       <div 
+        class="
+          bg-gradient-to-b from-[#E5E1FC] via-[#f3f2fa] to-[#ffffff] 
+          border border-[#DCD8FF]
+          rounded-3xl p-6 sm:p-8 md:p-10
+          
+          w-full max-w-[522px] h-auto lg:h-[371px]
+
+          xl:relative
+    xl:-top-10
+    xl:-left-16
+    md:top-0 md:left-0
+          z-10            /* 👈 uper show ho */
+        "
+        data-aos="fade-up"
+      >
+
+        <!-- Heading -->
+             <h2 class="text-center text-[28px] sm:text-[32px] lg:text-[36px] leading-[40px] lg:leading-[46px] font-semibold text-[#1C1C1C]">
+                 Hansi Tools
+                </h2>   
+
+        <!-- Divider -->
+        <div class="w-full h-[1px] bg-[#DCD8FF] my-6"></div>
+
+        <!-- List -->
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <img src={CheckIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#1C1C1C]">
+              All your metrics in one platform
+            </p>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <img src={CheckIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#1C1C1C]">
+              Instant report generation
+            </p>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <img src={CheckIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#1C1C1C]">
+              Insights personalized to your goals
+            </p>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <img src={CheckIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#1C1C1C]">
+              AI-powered recommendations for next steps
+            </p>
+          </li>
+
+          <li class="flex items-start gap-3">
+            <img src={CheckIcon} class="w-5 h-5 mt-1" />
+            <p class="text-[16px] sm:text-[18px] leading-[24px] text-[#1C1C1C]">
+              A clear roadmap to sustainable growth
+            </p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+

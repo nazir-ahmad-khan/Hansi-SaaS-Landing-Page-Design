@@ -1,0 +1,161 @@
+---
+// Hero section component"
+import Overview from "../../assets/images/HeroSection/overveiw.jpg?url";
+import User from "../../assets/icons/ic/Active Users.png?url";
+import Uptime from "../../assets/icons/ic/Uptime.png?url";
+import Headset from "../../assets/icons/ic/headset.png?url";
+import Certified from "../../assets/icons/ic/Certified.png?url";
+import AnimatedButton from "../ui/AnimatedButton.astro";
+
+import HeroBadgeIcon from "../../assets/icons/BadgeIcon/fi_hero.png?url";
+---
+
+<style>
+  /* ANIMATION */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-animate {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .hero-animate.animate {
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  /* STABILITY FIX (IMPORTANT) */
+  #hero-container {
+    will-change: transform;
+  }
+</style>
+
+<section id="hero" class="min-h-screen px-3 sm:px-4 md:px-6 py-3 sm:py-12 md:py-4 lg:py-4 bg-[#FFF]">
+
+
+  
+  <!-- MAIN CONTAINER -->
+  <div 
+    id="hero-container"
+    class="flex flex-col relative items-center text-center bg-[#F8F6FF] rounded-2xl sm:rounded-3xl px-4 sm:px-8 md:px-2 lg:px-20 py-10 sm:py-18 md:py-12 lg:py-20 xl:py-12"
+  >
+    
+    <!-- CONTENT -->
+    <div class="flex flex-col justify-center items-center px-4 sm:px-8 md:px-8 lg:px-20 space-y-4 sm:space-y-6 md:space-y-6">
+
+      <!-- Badge -->
+      <span 
+        class="hero-animate inline-flex items-center gap-2 rounded-full border border-[#E9D5FF] bg-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-[#7C3AED] shadow-sm"
+        style="animation-delay: 0.1s;"
+      >
+        <img src={HeroBadgeIcon} alt="Badge" />
+        AI-Powered Business Automation
+      </span>
+
+      <!-- Heading -->
+      <h1 
+        class="hero-animate font-medium leading-tight sm:leading-[1.2] tracking-[-0.03em] text-[#1C1C1C] text-2xl sm:text-3xl md:text-5xl lg:text-7xl max-w-full"
+        style="animation-delay: 0.2s;"
+      >
+        Streamline Your Business Operations with
+        <span class="text-[#664CDD]"> Intelligent Automation</span>
+      </h1>
+
+      <!-- Paragraph -->
+      <p 
+        class="hero-animate text-sm sm:text-base md:text-md lg:text-lg leading-relaxed text-[#1C1C1C] max-w-2xl"
+        style="animation-delay: 0.3s;"
+      >
+        Transform your workflow efficiency with our AI-powered platform.
+      </p>
+
+      <!-- FEATURES -->
+      <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm justify-center w-full">
+
+        <div class="hero-animate flex items-center gap-2" style="animation-delay: 0.4s;">
+          <div class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-white shadow">
+            <img src={User} class="w-3 h-3 sm:w-4 sm:h-4" />
+          </div>
+          <p>50,000+ Active Users</p>
+        </div>
+
+        <div class="hero-animate flex items-center gap-2" style="animation-delay: 0.45s;">
+          <div class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-white shadow">
+            <img src={Uptime} class="w-3 h-3 sm:w-4 sm:h-4" />
+          </div>
+          <p>99.9% Uptime</p>
+        </div>
+
+        <div class="hero-animate flex items-center gap-2" style="animation-delay: 0.5s;">
+          <div class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-white shadow">
+            <img src={Headset} class="w-3 h-3 sm:w-4 sm:h-4" />
+          </div>
+          <p>24/7 Support</p>
+        </div>
+
+        <div class="hero-animate flex items-center gap-2" style="animation-delay: 0.55s;">
+          <div class="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full bg-white shadow">
+            <img src={Certified} class="w-3 h-3 sm:w-4 sm:h-4" />
+          </div>
+          <p>Trusted SOC 2 Certified</p>
+        </div>
+
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="hero-animate flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center"
+        style="animation-delay: 0.6s;"
+      >
+        <AnimatedButton />
+
+        <a class="inline-flex h-10 sm:h-12 items-center justify-center rounded-full border border-[#DDD6FE] bg-white px-6 sm:px-8 text-sm font-semibold text-[#3730A3] shadow-sm w-full sm:w-auto">
+          Watch Demo
+        </a>
+      </div>
+
+    </div>
+
+    <!-- IMAGE (OVERLAP INTO NEXT SECTION) -->
+    <div
+      class="relative z-10 flex justify-center px-4 sm:px-8 md:px-8 lg:px-8 xl:px-20 pt-4 sm:pt-12 md:pt-8 -mb-[34%] sm:-mb-[18%] md:-mb-[30%] lg:-mb-[28%]"
+    >
+
+      <div 
+        class="hero-animate px-2 sm:px-4 py-2 sm:py-4 rounded-2xl sm:rounded-3xl bg-white border border-white shadow-sm w-full max-w-[1300px]"
+        style="animation-delay: 0.7s;"
+      >
+        <img 
+          src={Overview} 
+          alt="Overview dashboard" 
+          class="w-full object-cover rounded-lg sm:rounded-xl"
+        />
+      </div>
+
+    </div>
+
+  </div>
+  
+
+
+
+
+
+</section>
+
+<script>
+  window.addEventListener("load", () => {
+    document.querySelectorAll(".hero-animate").forEach((el, i) => {
+      setTimeout(() => {
+        el.classList.add("animate");
+      }, i * 120);
+    });
+  });
+</script>
