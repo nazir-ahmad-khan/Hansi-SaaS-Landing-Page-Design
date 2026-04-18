@@ -86,10 +86,12 @@ const benefits = [
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 lg:gap-4">
 
-  {benefits.map((item) => (
+  {benefits.map((item, index) => (
     <div
-      class={`rounded-3xl w-full max-w-[413px] min-h-[240px] mx-auto p-6 sm:p-8 border border-white bg-gradient-to-b ${item.bg}`}
-      data-aos="fade-up"
+      class={`rounded-3xl w-full max-w-[413px] mx-auto p-6 sm:p-8 border border-white bg-gradient-to-b ${item.bg}`}
+      data-aos="zoom-in"
+      data-aos-delay={index * 150}
+      data-aos-duration="900"
     >
 
       <!-- Icon -->
