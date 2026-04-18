@@ -1,23 +1,110 @@
-# Astro Starter Kit: Minimal
+# Hansi Leading Page
 
-```sh
-npm create astro@latest -- --template minimal
+A modern, responsive landing page built with Astro, Tailwind CSS, Preline UI, and AOS animations.
+
+## Tech Stack
+
+- **Astro** - Static site generator
+- **Tailwind CSS** - Utility-first CSS framework
+- **Preline UI** - Component library for Tailwind
+- **AOS** - Animate On Scroll library
+- **@astrojs/sitemap** - Automatic sitemap generation
+
+## Features
+
+- Single-page landing layout with smooth scrolling navigation
+- Responsive design (mobile, tablet, desktop)
+- Modern UI with animations
+- SEO optimized with sitemap
+- Clean, maintainable code structure
+
+## Sections
+
+1. Hero Section
+2. Features Section
+3. Benefits Section
+4. Integrations Section
+5. Pricing Section
+6. Blog Section
+7. Contact Section
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Start the development server:
+```bash
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Open [http://localhost:4321](http://localhost:4321) in your browser.
 
-## 🚀 Project Structure
+### Build
 
-Inside of your Astro project, you'll see the following folders and files:
+Build for production:
+```bash
+npm run build
+```
 
-```text
+Preview the production build:
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
 /
 ├── public/
+│   └── favicon.svg
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── Features.astro
+│   │   ├── Benefits.astro
+│   │   ├── Integrations.astro
+│   │   ├── Pricing.astro
+│   │   ├── Blog.astro
+│   │   └── Contact.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
+├── astro.config.mjs
+├── tailwind.config.mjs
 └── package.json
 ```
+
+## Customization
+
+- Update the site URL in `astro.config.mjs`
+- Replace placeholder images in the `public/` folder
+- Modify content in the component files
+- Adjust styling in the Tailwind classes
+
+## Deployment
+
+This project can be deployed to any static hosting service like Vercel, Netlify, or GitHub Pages.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
